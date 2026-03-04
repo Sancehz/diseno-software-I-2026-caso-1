@@ -30,9 +30,9 @@ https://github.com/vsurak/cursostec/blob/master/diseno/Week%20%233%20-%20Dise%C3
 - Notifications: Sonner 1.5
 - State Management: Zustand 4.5 (UI State)
 - Data Fetching: TanStack Query 5.40 (Databases)
-- Data Validation: Zod
-- Unit Testing: Jest
-- Integration / E2E Testing: Playwright
+- Data Validation: Zod 4
+- Unit Testing: Jest 30.0
+- Integration / E2E Testing: Playwright 1.58+
 - Code Formatting: Prettier
 - Code Linting: ESLint
 - Observability: Sentry
