@@ -145,6 +145,77 @@ The expected result is a fully pre-filled Word DUA document with visual confiden
 │   Auth0 provider, guards, session hooks  │
 └──────────────────────────────────────────┘
 ```
+### 1.6 Design Patterns
+
+| Pattern | Class / Hook | Location |
+|---|---|---|
+| Singleton | `ApiClient` (Axios instance) | `src/services/ApiClient.ts` |
+| Factory | `DocumentParserFactory` | `src/services/parsers/DocumentParserFactory.ts` |
+| Observer | `useNotifications` (Sonner + event bus) | `src/hooks/useNotifications.ts` |
+| Strategy | `ConfidenceStrategy` (per-field rules) | `src/features/dua/strategies/ConfidenceStrategy.ts` |
+| Repository | `DuaRepository` (TanStack Query wrappers) | `src/services/repositories/DuaRepository.ts` |
+| Command | `useFileUploadCommand` (async file pipeline) | `src/hooks/useFileUploadCommand.ts` |
+| Facade | `DuaService` (orchestrates parsers + API) | `src/services/DuaService.ts` |
+| Guard / HOC | `RequireAuth`, `RequirePermission` | `src/auth/RequireAuth.tsx`, `src/auth/RequirePermission.tsx` |
+| Slice (Flux) | `duaSlice`, `uploadSlice` | `src/store/duaSlice.ts`, `src/store/uploadSlice.ts` |
+
+### 1.7 Project Scaffold
+
+```
+src/
+├── auth/
+│   ├── AuthProvider.tsx
+│   ├── RequireAuth.tsx
+│   ├── RequirePermission.tsx
+│   ├── usePermissions.ts
+│   └── useSessionGuard.ts
+├── components/
+│   ├── ui/                        # shadcn/ui base components
+│   ├── ConfidenceBadge.tsx
+│   ├── DropZone.tsx
+│   ├── FieldRow.tsx
+│   └── StepIndicator.tsx
+├── features/
+│   └── dua/
+│       ├── DuaReviewTable.tsx
+│       ├── DuaUploadPanel.tsx
+│       ├── hooks/
+│       │   ├── useDuaReview.ts
+│       │   └── useDuaSubmit.ts
+│       └── strategies/
+│           └── ConfidenceStrategy.ts
+├── hooks/
+│   ├── useFileUploadCommand.ts
+│   └── useNotifications.ts
+├── locales/
+│   ├── en/
+│   │   └── common.json
+│   └── es/
+│       └── common.json
+├── pages/
+│   ├── HomePage.tsx
+│   ├── ReviewPage.tsx
+│   └── NotFoundPage.tsx
+├── schemas/
+│   ├── duaSchema.ts
+│   └── uploadSchema.ts
+├── services/
+│   ├── ApiClient.ts
+│   ├── DuaService.ts
+│   ├── parsers/
+│   │   └── DocumentParserFactory.ts
+│   └── repositories/
+│       └── DuaRepository.ts
+├── store/
+│   ├── duaSlice.ts
+│   └── uploadSlice.ts
+├── styles/
+│   ├── brand.ts
+│   └── globals.css
+├── App.tsx
+├── main.tsx
+└── router.tsx
+```
 
 ### Technology Stack
 
