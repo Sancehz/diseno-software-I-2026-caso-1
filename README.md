@@ -16,9 +16,9 @@ Autores:
 ## 1. Frontend Design
 https://github.com/vsurak/cursostec/blob/master/diseno/Week%20%233%20-%20Dise%C3%B1o%20del%20frontend.md
 
-Type: Web-app
 
 ### 1.1 Technology Stack
+- Application Type: Web-app
 - Language: TypeScript 5.4
 - Framework: Next.js 13.5
 	- React 18.3
@@ -28,10 +28,19 @@ Type: Web-app
 	- Icons Lucide React 0.383
 - Auth: Auth.js
 - Notifications: Sonner 1.5
-- State: Management Zustand 4.5 (UI State)
+- State Management: Zustand 4.5 (UI State)
 - Data Fetching: TanStack Query 5.40 (Databases)
-
-- Hosting: Vercel
+- Data Validation: Zod
+- Unit Testing: Jest
+- Integration / E2E Testing: Playwright
+- Code Formatting: Prettier
+- Code Linting: ESLint
+- Observability: Sentry
+- Code Repository & Collaboration: GitHub
+- Automation & CI/CD: GitHub Actions (CI/CD Pipelines)
+	- npm scripts (Task Automation)
+- Hosting / Cloud: Vercel
+- Deployment Tools: GitHub Actions
 
 ### 1.2 UX/UI Analysis
 
