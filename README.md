@@ -16,39 +16,22 @@ Autores:
 ## 1. Frontend Design
 https://github.com/vsurak/cursostec/blob/master/diseno/Week%20%233%20-%20Dise%C3%B1o%20del%20frontend.md
 
-Medio de interaccion (planeado): Webapp
-
-Readme · MD
-# Dua streamliner design
-
-The current process of preparing the DUA is highly manual, time-consuming, and error-prone for importers and exporters. Information required to complete the document is typically scattered across multiple files such as Excel sheets, Word documents, PDFs, and scanned invoices. These documents often follow different structures and formats, making data extraction complex and heavily dependent on human interpretation. As a result, customs specialists spend significant time consolidating, validating, and transcribing information into the official template.
-
-To address this challenge, the proposed solution is an automated system that requires only a folder path containing all relevant documents. The system will intelligently read multiple formats, extract both structured and unstructured data—including OCR from scanned images—and apply AI-driven semantic interpretation tailored to customs terminology. It will then automatically map the extracted information to the official DUA template defined by the Ministerio de Hacienda, validate basic consistency rules, and flag ambiguous or low-confidence fields for review.
-
-The expected result is a fully pre-filled Word DUA document with visual confidence indicators that guide expert validation. This approach does not eliminate the customs specialist's role but transforms it into a strategic review function, significantly reducing manual operational workload. Ultimately, the system aims to increase efficiency, reduce errors, accelerate processing times, and improve compliance accuracy in international trade operations.
-
-## 1. Frontend Design
+Type: Web-app
 
 ### 1.1 Technology Stack
+- Language: TypeScript 5.4
+- Framework: Next.js 13.5
+	- React 18.3
+	- React Dropzone 14.2 (File Upload)
+- Component Library: shadcn/ui 0.8
+- Styling: Tailwind CSS 3.4
+	- Icons Lucide React 0.383
+- Auth: Auth.js
+- Notifications: Sonner 1.5
+- State: Management Zustand 4.5 (UI State)
+- Data Fetching: TanStack Query 5.40 (Databases)
 
-| Layer | Technology | Version |
-|---|---|---|
-| Framework | React | 18.3 |
-| Language | TypeScript | 5.4 |
-| Build Tool | Vite | 5.2 |
-| Styling | Tailwind CSS | 3.4 |
-| Component Library | shadcn/ui | 0.8 |
-| State Management | Zustand | 4.5 |
-| Data Fetching | TanStack Query | 5.40 |
-| Routing | React Router | 6.23 |
-| Form Handling | React Hook Form + Zod | 7.51 / 3.23 |
-| HTTP Client | Axios | 1.7 |
-| Auth | Auth0 React SDK | 2.2 |
-| i18n | i18next + react-i18next | 23.11 / 14.1 |
-| Icons | Lucide React | 0.383 |
-| File Upload | react-dropzone | 14.2 |
-| Notifications | Sonner | 1.5 |
-| Hosting | Vercel | — |
+- Hosting: Vercel
 
 ### 1.2 UX/UI Analysis
 
