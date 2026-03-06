@@ -45,7 +45,14 @@ Authors:
 Describir paso a paso lo que sucede en pantalla (sin hablar de botones, etc)
 
 1. Login
-2. Configurar el generador
+- User enters their credentials (username/email, password)
+- If the user exists but the password is incorrect, the user is prompted to enter the correct password
+- If the user does not exist, they are informed their username/email is incorrect
+
+2. Streamliner Configuration
+- User selects a folder containing word and excel files from their computer
+- User selects a single Word file as the template for the DUA report
+
 3. Monitoreo de avance
 4. Obtencion de resultado
 5. Logout
@@ -58,6 +65,7 @@ Generar los screens con titulo, descripcion, imagen
 - Se aplica de forma remota compartido a 3 estudiantes o amigos
 - Generar reporte de resultados en tabla de md (evidencias)
 - Heatmap
+
 
 ## Recursos
 - Qué es DUA: https://alianza-logistics.com/documento-unico-aduanero-2/
