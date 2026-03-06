@@ -42,32 +42,40 @@ Authors:
 ### 1.2 UX/UI Analysis
 
 #### Core business process
-Describir paso a paso lo que sucede en pantalla (sin hablar de botones, etc)
-
-1. Login
+##### Login
 - User enters their credentials (username/email, password)
 - If the user exists but the password is incorrect, the user is prompted to enter the correct password
 - If the user does not exist, they are informed their username/email is incorrect
 
-2. Streamliner Configuration
+##### Streamliner Configuration
 - User selects a folder containing word and excel files from their computer
 - User selects a single Word file as the template for the DUA report
 - User confirms the files to be scanned from the folder
 
-3. Process monitoring
+##### Process monitoring
 - For each stage of the process, the user is informed of the state of the report: Scanning the template, scanning each file and generating the report
 - If there is an error during the process, the user is prompted to configure the streamliner again
 
-4. Results
+##### Results
 - If the proces is successful, the user is shown a small preview of the file
 - The user downloads the final report
 
-5. Logout
+##### Logout
 - The user can choose to log out if there is no report in progress, they are asked for confirmation
 - If the user confirms the logout, they are brought back to the login page
 
 #### Wireframes
-Generar los screens con titulo, descripcion, imagen
+##### Login
+!(img/wireframe_login.webp)
+
+##### Streamliner Configuration
+
+##### Process monitoring
+
+##### Results
+
+##### Logout
+
 
 #### UX test results (homework)
 - Escoger alguna app para ejecutar el UX test usando los wireframes
