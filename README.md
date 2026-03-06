@@ -41,6 +41,19 @@ Authors:
 
 ### 1.2 UX/UI Analysis
 
+#### Core business process
+Describir paso a paso lo que sucede en pantalla (sin hablar de botones, etc)
+
+1. Login
+2. Configurar el generador
+3. Monitoreo de avance
+4. Obtencion de resultado
+5. Logout
+
+#### Wireframes
+Generar los screens con titulo, descripcion, imagen
+
+
 **Usability attributes:**
 
 - **Minimal input friction:** Single folder path input or drag-and-drop file upload as primary entry point.
@@ -85,6 +98,8 @@ Authors:
 **UX validation:** Wireframes were tested with 3 customs specialists in think-aloud sessions. Key findings: (1) confidence color scale was intuitive without a legend, (2) users expected drag-and-drop before seeing the browse button—order was adjusted, (3) "Export Word" CTA placement in header was preferred over a bottom footer position.
 
 ### 1.3 Component Design Strategy
+
+
 
 **Technique:** Atomic Design — atoms → molecules → organisms → pages.
 
