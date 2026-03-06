@@ -52,10 +52,19 @@ Describir paso a paso lo que sucede en pantalla (sin hablar de botones, etc)
 2. Streamliner Configuration
 - User selects a folder containing word and excel files from their computer
 - User selects a single Word file as the template for the DUA report
+- User confirms the files to be scanned from the folder
 
-3. Monitoreo de avance
-4. Obtencion de resultado
+3. Process monitoring
+- For each stage of the process, the user is informed of the state of the report: Scanning the template, scanning each file and generating the report
+- If there is an error during the process, the user is prompted to configure the streamliner again
+
+4. Results
+- If the proces is successful, the user is shown a small preview of the file
+- The user downloads the final report
+
 5. Logout
+- The user can choose to log out if there is no report in progress, they are asked for confirmation
+- If the user confirms the logout, they are brought back to the login page
 
 #### Wireframes
 Generar los screens con titulo, descripcion, imagen
