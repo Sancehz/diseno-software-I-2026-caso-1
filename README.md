@@ -80,7 +80,8 @@ Authors:
 ![result](/img/wireframe_report.webp)
 
 ##### Logout
-![logout](/img/wireframe_logout.webp)
+![logout](/img/wireframe_logout_1.webp)
+![logout](/img/wireframe_logout_2.webp)
 
 
 #### UX test results (homework)
