@@ -1,7 +1,6 @@
 # Caso 1 - DUA Streamliner
 
-Sistema Inteligente para la Generación Automatizada del DUA
-[El Problema]
+## Intelligent system for DUA streamlining
 
 The current process of preparing the DUA is highly manual, time-consuming, and error-prone for importers and exporters. Information required to complete the document is typically scattered across multiple files such as Excel sheets, Word documents, PDFs, and scanned invoices. These documents often follow different structures and formats, making data extraction complex and heavily dependent on human interpretation. As a result, customs specialists spend significant time consolidating, validating, and transcribing information into the official template.
 
@@ -9,15 +8,13 @@ To address this challenge, the proposed solution is an automated system that req
 
 The expected result is a fully pre-filled Word DUA document with visual confidence indicators that guide expert validation. This approach does not eliminate the customs specialist's role but transforms it into a strategic review function, significantly reducing manual operational workload. Ultimately, the system aims to increase efficiency, reduce errors, accelerate processing times, and improve compliance accuracy in international trade operations.
 
-Autores:
+Authors:
  - Sebastian Sanchez Delgado 2023346349
  - Valeria Vargas Alvarado 2023044728
 
 ## 1. Frontend Design
-https://github.com/vsurak/cursostec/blob/master/diseno/Week%20%233%20-%20Dise%C3%B1o%20del%20frontend.md
 
-
-### 1.1 Technology Stack
+### 1.1 Technology Stacks
 - Application Type: Web-app
 - Language: TypeScript 5.4
 - Framework: Next.js 13.5
