@@ -66,7 +66,7 @@ Authors:
 
 #### Wireframes
 ##### Login
-!(img/wireframe_login.webp)
+![login](/img/wireframe_login.webp)
 
 ##### Streamliner Configuration
 
