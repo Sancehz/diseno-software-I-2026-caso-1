@@ -69,12 +69,18 @@ Authors:
 ![login](/img/wireframe_login.webp)
 
 ##### Streamliner Configuration
+![setting](/img/wireframe_setting_1.webp)
+![setting](/img/wireframe_setting_2.webp)
 
 ##### Process monitoring
+![monitor](/img/wireframe_monitor_1.webp)
+![monitor](/img/wireframe_monitor_2.webp)
 
 ##### Results
+![result](/img/wireframe_report.webp)
 
 ##### Logout
+![logout](/img/wireframe_logout.webp)
 
 
 #### UX test results (homework)
