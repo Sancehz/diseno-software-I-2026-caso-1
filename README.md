@@ -91,47 +91,56 @@ Authors:
 
 ##### Results
 - Participants: 8
+- Pool: TEC Students
 
 | Time   | Device  | Completed | Rating | Comments |
-| :----: | :-----: | :-------: | :----: | :------: |
-| 3m 42s | Desktop | Yes       | 5/5    |  me gusta la simplicidad de la pagina, muy facil de entender |
-| :----: | :-----: | :-------: | :----: | :------: |
-|    29s | Mobile  |  No       | N/A    |  N/A     |
-| :----: | :-----: | :-------: | :----: | :------: |
-| 1m 50s | Desktop | Yes       | 5/5    |  Interfaz muy elegante  |
-| :----: | :-----: | :-------: | :----: | :------: |
-| 4m 31s | Desktop | Yes       | 5/5    |  N/A     |
-| :----: | :-----: | :-------: | :----: | :------: |
-|    37s | Mobile  |  No       | N/A    |  N/A     |
-| :----: | :-----: | :-------: | :----: | :------: |
-| 2m     | Desktop | Yes       | 5/5    |  N/A     |
-| :----: | :-----: | :-------: | :----: | :------: |
-| 1m 46s | Mobile  | Yes       | 5/5    |  N/A     |
-
-crear un markdown table con los resultados
-
-Evidencias Juan mi amigo de mante Ana la de mante Tio de johel
-
-Heatmap Dua steamliner heatmap
+| :----: | :-----: | :-------: | :----: | :------- |
+| 3m 42s | Desktop | Yes       | 5/5    | me gusta la simplicidad de la pagina, muy facil de entender |
+|    29s | Mobile  |  No       | N/A    | N/A     |
+| 1m 50s | Desktop | Yes       | 5/5    | Interfaz muy elegante  |
+| 4m 31s | Desktop | Yes       | 5/5    | N/A     |
+|    37s | Mobile  |  No       | N/A    | N/A     |
+| 2m     | Desktop | Yes       | 5/5    | N/A     |
+| 1m 46s | Mobile  | Yes       | 5/5    | N/A     |
 
 Results visible at: https://app.useberry.com/sharing-results/QPLIjHIrjaB066/?segmentID=30022375-da37-46d1-a394-a7ec64bf5498
 
+##### Heatmaps
+Login:
 
-### Security
+Streamliner config:
+
+Process monitoring:
+
+Results:
+
+Logout:
+
+### 1.3 Component Design Strategy
+
+### 1.4 Security
 Tecnologías, técnicas y classes con su respectiva ubicación en la estructura del proyecto responsables de la autenticación y la autorización de permisos y sesiones.
 
-MFA: Multifactor Auth
+Tomando en cuenta donde se hostea (Vercel / Cloud)
+- Es un single app auth? Si
+- Que servicios de auth hay? (Authenticator y Credential server)
+- Cual va a ser el hosting? 
+- Preguntar si vercel tiene un servicio de sesiones nativo o cache de sesiones (Redis, memcached)
+    - Cual servicio de sesiones?
+- Auth server name? 
 
+MFA: Multifactor Auth
 - Como se autentican los usuarios del app?
 - La app soporta MFA? metodo: authenticator app, etc.
 - Server de credenciales?
 
-
-
+**OPCION ALTERNATIVA: Si el app se autentica exclusivamente con google, facebook, etc.**
 
 #### Authentication
 
-####
+### 1.5 Layered Design
+
+### 1.6 Design Patterns
 
 ## Recursos
 - Qué es DUA: https://alianza-logistics.com/documento-unico-aduanero-2/
