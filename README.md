@@ -85,11 +85,38 @@ Authors:
 
 
 #### UX test results (homework)
-- Escoger alguna app para ejecutar el UX test usando los wireframes
-- Se aplica de forma remota compartido a 3 estudiantes o amigos
-- Generar reporte de resultados en tabla de md (evidencias)
-- Heatmap
+- Tools:
+    - Wirframes: Figma
+	- UX testing: Useberry
 
+escoger alguna app para ejecutar el UX test usando esos wireframes
+
+el test se lo van a aplicar en forma remota compartiendo un URL a 3 estudiantes o amigos
+
+eso va generar un reporte de resultados
+
+crear un markdown table con los resultados
+
+Evidencias Juan mi amigo de mante Ana la de mante Tio de johel
+
+Heatmap Dua steamliner heatmap
+
+
+### Security
+Tecnologías, técnicas y classes con su respectiva ubicación en la estructura del proyecto responsables de la autenticación y la autorización de permisos y sesiones.
+
+MFA: Multifactor Auth
+
+- Como se autentican los usuarios del app?
+- La app soporta MFA? metodo: authenticator app, etc.
+- Server de credenciales?
+
+
+
+
+#### Authentication
+
+####
 
 ## Recursos
 - Qué es DUA: https://alianza-logistics.com/documento-unico-aduanero-2/
