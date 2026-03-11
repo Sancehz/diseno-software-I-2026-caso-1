@@ -117,10 +117,10 @@ Results:
 Logout:
 
 ### 1.3 Component Design Strategy
-Strategy: 
-Reutilization by:
-Internationalization by:
-Responsiveness by:
+Strategy: Utility first
+Reutilization by: Tailwind, shadcn/ui 
+Internationalization by: Next.js native routing support (i18n)
+Responsiveness by: Tailwind breakpoints, React
 
 ### 1.4 Security
 Tecnologías, técnicas y classes con su respectiva ubicación en la estructura del proyecto responsables de la autenticación y la autorización de permisos y sesiones.
