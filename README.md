@@ -139,7 +139,9 @@ Tipos de usuario:
 - Soporte tecnico: Esta disponible a preguntas de usuarios.
 - Usuario aduanero: Genera reportes.
 
-PBAC: La aplicacion solo se puede acceder desde Costa Rica.
+** TODO: Add lista de permisos por rol (CODIGO, DESCRIPCION)
+
+Se tiene un acceso basado en politicaas (PBAC): La aplicacion solo se puede acceder desde Costa Rica.
 
 MFA: Multifactor Auth
 - Como se autentican los usuarios del app?
@@ -148,7 +150,7 @@ MFA: Multifactor Auth
 
 **OPCION ALTERNATIVA: Si el app se autentica exclusivamente con google, facebook, etc.** (preferible porque es mas facil)
 
-#### Authentication
+Cual es el servicio de secured storage para variables de entorno, sensitive data, etc.
 
 ### 1.5 Layered Design
 
