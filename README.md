@@ -117,6 +117,10 @@ Results:
 Logout:
 
 ### 1.3 Component Design Strategy
+Strategy: 
+Reutilization by:
+Internationalization by:
+Responsiveness by:
 
 ### 1.4 Security
 Tecnologías, técnicas y classes con su respectiva ubicación en la estructura del proyecto responsables de la autenticación y la autorización de permisos y sesiones.
@@ -129,12 +133,20 @@ Tomando en cuenta donde se hostea (Vercel / Cloud)
     - Cual servicio de sesiones?
 - Auth server name? 
 
+La seguridad del sistema se basa en roles (RBAC)
+Tipos de usuario:
+- Admin: Maneja y observa los procesos actuales de reportes, etc.
+- Soporte tecnico: Esta disponible a preguntas de usuarios.
+- Usuario aduanero: Genera reportes.
+
+PBAC: La aplicacion solo se puede acceder desde Costa Rica.
+
 MFA: Multifactor Auth
 - Como se autentican los usuarios del app?
 - La app soporta MFA? metodo: authenticator app, etc.
 - Server de credenciales?
 
-**OPCION ALTERNATIVA: Si el app se autentica exclusivamente con google, facebook, etc.**
+**OPCION ALTERNATIVA: Si el app se autentica exclusivamente con google, facebook, etc.** (preferible porque es mas facil)
 
 #### Authentication
 
