@@ -89,17 +89,20 @@ Authors:
     - Wirframes: Figma
 	- UX testing: Useberry
 
-escoger alguna app para ejecutar el UX test usando esos wireframes
+##### Results
+- Participants: 8
 
-el test se lo van a aplicar en forma remota compartiendo un URL a 3 estudiantes o amigos
-
-eso va generar un reporte de resultados
+| Time   | Device  | Completed | Rating | Comments |
+| :----: | :-----: | :-------: | :----: | :------: |
+| 3m 42s | Desktop | Yes       | 5/5    |          |
 
 crear un markdown table con los resultados
 
 Evidencias Juan mi amigo de mante Ana la de mante Tio de johel
 
 Heatmap Dua steamliner heatmap
+
+Results visible at: https://app.useberry.com/sharing-results/QPLIjHIrjaB066/?segmentID=30022375-da37-46d1-a394-a7ec64bf5498
 
 
 ### Security
