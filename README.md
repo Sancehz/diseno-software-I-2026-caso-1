@@ -94,7 +94,19 @@ Authors:
 
 | Time   | Device  | Completed | Rating | Comments |
 | :----: | :-----: | :-------: | :----: | :------: |
-| 3m 42s | Desktop | Yes       | 5/5    |          |
+| 3m 42s | Desktop | Yes       | 5/5    |  me gusta la simplicidad de la pagina, muy facil de entender |
+| :----: | :-----: | :-------: | :----: | :------: |
+|    29s | Mobile  |  No       | N/A    |  N/A     |
+| :----: | :-----: | :-------: | :----: | :------: |
+| 1m 50s | Desktop | Yes       | 5/5    |  Interfaz muy elegante  |
+| :----: | :-----: | :-------: | :----: | :------: |
+| 4m 31s | Desktop | Yes       | 5/5    |  N/A     |
+| :----: | :-----: | :-------: | :----: | :------: |
+|    37s | Mobile  |  No       | N/A    |  N/A     |
+| :----: | :-----: | :-------: | :----: | :------: |
+| 2m     | Desktop | Yes       | 5/5    |  N/A     |
+| :----: | :-----: | :-------: | :----: | :------: |
+| 1m 46s | Mobile  | Yes       | 5/5    |  N/A     |
 
 crear un markdown table con los resultados
 
