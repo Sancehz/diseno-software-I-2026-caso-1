@@ -107,14 +107,19 @@ Results visible at: https://app.useberry.com/sharing-results/QPLIjHIrjaB066/?seg
 
 ##### Heatmaps
 Login:
+![HMlogin](/img/1.HMLogin.png)
 
 Streamliner config:
+![HMSteamliner](/img/2.HMStreamlinerConfig.png)
 
 Process monitoring:
+![HMProcessMonitoring](/img/3.HMProcessMonitoring.png)
 
 Results:
+![HMResults](/img/4.HMResults.png)
 
 Logout:
+![HMLogout](/img/5.HMLogout.png)
 
 ### 1.3 Component Design Strategy
 Strategy: Utility first
