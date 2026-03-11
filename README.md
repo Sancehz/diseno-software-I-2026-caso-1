@@ -102,6 +102,7 @@ Authors:
 |    37s | Mobile  |  No       | N/A    | N/A     |
 | 2m     | Desktop | Yes       | 5/5    | N/A     |
 | 1m 46s | Mobile  | Yes       | 5/5    | N/A     |
+| 4m 47s | Desktop | Yes       | 5/5    | Buen layout, fácil de usar. |
 
 Results visible at: https://app.useberry.com/sharing-results/QPLIjHIrjaB066/?segmentID=30022375-da37-46d1-a394-a7ec64bf5498
 
