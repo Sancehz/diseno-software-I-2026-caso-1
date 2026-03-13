@@ -158,7 +158,62 @@ MFA: Multifactor Auth
 
 Cual es el servicio de secured storage para variables de entorno, sensitive data, etc.
 
+#### Instrucciones
+Tecnologías, técnicas y classes con su respectiva ubicación en la estructura del proyecto responsables de la autenticación y la autorización de permisos y sesiones. 
+
+- Si es MFA
+- Qué medios de MFA soporta
+- Si es single sign on o no
+- Service de authentication , depende de la plataforma
+- Definir si soporta google and or facebook authentication (Utiliza google auth)
+- Si es RBAC, dar la lista de roles: rolename, description
+- Para cada role, lista de permisos: codigo de permiso, descripcion (Estan arriba)
+- Si tiene algun tipo de ACL y el nombre del servicio de ACL (no???????)
+- Si tiene PBAC, definir las políticas (solo usuario con IP en CR)
+- Servicio de secure store para env variables, api keys, sensitive data
+- authenticator server name
+
 ### 1.5 Layered Design
+
+Domininios de responsabilidad de los objetos
+
+Parte de component Design
+
+Hooks (react)
+
+1. dame the folder structure for a common [el framework o metodo de componentizacion que ustedes eligieron] in [technologia de frontend seleccionada] required to build webapps
+
+2. List of tipical responsibility layers in a enterprise frontend design, provide just the list of names
+- Business logic
+- State management 
+- Data access
+- API layers / third party services
+- Utils
+- Data validation (input - output)
+- Authentication layer
+- Authorization layer
+- Models 
+- Testability - Capa no activa
+- Observability (logs)
+- Settings (envvars)
+- Routing (cuando haya que conectarse de muchas fuentes)
+- Listeners
+- Section handling
+
+#### Arquitectura top down (copiado del prof)
+Las layers adjacentes en profundidad y en layer se utilizan entre si
+El frontend utiliza Server Side Rendering
+- Models (objects), utils y state management es accedido por todas las layers
+
+- Si no hay una sesion autenticada, se lleva al layer de Authentication
+- Si la autenticacion es exitosa: 
+	- Notification layer se relaciona con todas las layers siguientes
+    - Se accede del recurso visual de la capa de components (views): Los componentes siguen Utility first design
+        - En la capa de services (business logic) podrian requerir de acceder:
+        - Utils para data validation y fetch del usuario (archivo)
+	    - Settings
+	        - API layer
+
 
 ### 1.6 Design Patterns
 
