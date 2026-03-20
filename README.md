@@ -218,6 +218,82 @@ El frontend utiliza Server Side Rendering
         - Utils para data validation y fetch del usuario (archivo)
 	    - Settings
 	        - API layer
+           
+Layered design overviews:
+
+SSR layer — Next.js runtime
+Every incoming request enters here. Server components and route handlers execute on Vercel's serverless infrastructure. Before any rendering occurs, the edge middleware (middleware.ts) enforces the PBAC geo-restriction and delegates authentication checks to Auth.js. This layer is also responsible for hydration: it pre-renders the initial HTML and passes it to the browser.
+src/
+├── app/                    ← Next.js App Router (server components by default)
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── api/                ← Route handlers
+└── middleware.ts            ← Edge middleware (PBAC + session guard)
+
+Authentication layer
+If no valid session exists when the SSR layer processes a request, the user is redirected to the authentication flow. This layer is not a UI concern — it is resolved entirely at the server level by Auth.js before the Components Layer ever renders. On success, a JWT session is established and the request continues to the Components Layer.
+src/
+└── auth/
+    ├── auth.config.ts       ← Entra ID provider, JWT/session callbacks
+    └── auth.ts              ← Auth.js instance export
+
+Components layer
+Activated only after a valid authenticated session is confirmed. Components follow Atomic Design, organized from the smallest reusable primitives up to full page compositions. Styling uses Tailwind CSS (utility-first), and the component library is shadcn/ui.
+src/
+└── components/
+    ├── atoms/               ← Button, Input, Badge, Icon, Spinner
+    ├── molecules/           ← FileDropzone, StatusBadge, ConfidenceBar
+    ├── organisms/           ← FileSelector, ProcessMonitor, ResultsPanel
+    ├── templates/           ← PageLayout, DashboardShell
+    └── pages/               ← LoginPage, StreamlinerPage, ResultsPage
+No business logic lives in components. Components are responsible only for rendering and forwarding user interactions to the Hooks Layer.
+
+Hooks layer
+React custom hooks sit between components and services. They translate UI events (button clicks, file selections, form submissions) into service calls, and they feed data from the Services Layer back into component state. Hooks use TanStack Query for async server-state management and Zustand for local UI state.
+src/
+└── hooks/
+    ├── useAuth.ts           ← Session reads, role/permission checks
+    ├── useFileUpload.ts     ← Manages file selection and validation
+    ├── useDuaGeneration.ts  ← Triggers and monitors the AI generation process
+    ├── useDownload.ts       ← Handles DUA document download
+    └── useNotifications.ts  ← Subscribes to Notification Service events
+Hooks never call ApiClients directly. They call Services, which decide whether an API call is needed.
+
+Services layer
+The business logic home. Services are plain TypeScript classes instantiated once per request context. They orchestrate operations: deciding when to call an API, when to read from state, when to validate data, and when to emit a notification. Services have no knowledge of React or the DOM.
+src/
+└── services/
+    ├── AuthService.ts       ← Session resolution, permission validation
+    ├── FileService.ts       ← File reading, format detection, pre-processing
+    ├── DuaService.ts        ← AI generation orchestration, template mapping
+    ├── TemplateService.ts   ← DUA template CRUD (Manager role only)
+    ├── UserService.ts       ← User management (Manager role only)
+    ├── ReportService.ts     ← Operational report generation
+    └── DownloadService.ts   ← Document export and download packaging
+
+Utils layer
+Stateless helper functions with no side effects. Reachable from any layer. Includes formatters, date helpers, file-type utilities, string sanitizers, and type guards.
+src/
+└── utils/
+    ├── formatters.ts
+    ├── fileUtils.ts
+    ├── typeGuards.ts
+    └── dateUtils.ts
+
+ApiClients layer
+All classes that communicate with external APIs live here and nowhere else. Each client is focused on a single external service. Clients read their base URLs and API keys from Settings. All request payloads and response objects pass through Models and are validated by the DataValidation layer before being used by services. Async calls always emit results through the NotificationService rather than returning directly.
+src/
+└── api/
+    ├── AzureOpenAIClient.ts  ← AI generation and OCR endpoints
+    ├── KeyVaultClient.ts     ← Secret resolution at startup
+    ├── StorageClient.ts      ← File storage operations
+    └── InsightsClient.ts     ← Azure Application Insights telemetry
+
+Settings layer
+Reads environment variables injected by the Vercel runtime, which are sourced from Azure Key Vault. Settings is a read-only singleton. ApiClients reads from it at initialization; no other layer reaches Key Vault directly.
+src/
+└── config/
+    └── settings.ts          ← Typed env var accessors (process.env wrappers)
 
 
 ### 1.6 Design Patterns
