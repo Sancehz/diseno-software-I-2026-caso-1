@@ -129,6 +129,9 @@ Internationalization by: Next.js native routing support (i18n)
 Responsiveness by: Tailwind breakpoints, React
 
 ### 1.4 Security
+
+![SecAuthArchitecture](/img/1.4.security_auth_architecture.svg)
+
 Tecnologías, técnicas y classes con su respectiva ubicación en la estructura del proyecto responsables de la autenticación y la autorización de permisos y sesiones.
 
 Tomando en cuenta donde se hostea (Vercel / Cloud)
@@ -174,6 +177,8 @@ Tecnologías, técnicas y classes con su respectiva ubicación en la estructura 
 - authenticator server name
 
 ### 1.5 Layered Design
+
+![LayeredArchitecture](/img/1.5.layered_architecture_overview.svg)
 
 Domininios de responsabilidad de los objetos
 
