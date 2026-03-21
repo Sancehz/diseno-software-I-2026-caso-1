@@ -298,6 +298,10 @@ src/
 
 ### 1.6 Design Patterns
 
+
+### 1.7 Scaffold
+- Visible en `/src`
+
 ## Recursos
 - Qué es DUA: https://alianza-logistics.com/documento-unico-aduanero-2/
 - Especificacion de Hacienda: https://www.hacienda.go.cr/docs/Mensaje_TD_DUA.pdf
