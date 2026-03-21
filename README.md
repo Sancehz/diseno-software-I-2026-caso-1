@@ -297,6 +297,33 @@ src/
 
 
 ### 1.6 Design Patterns
+#### Singleton
+APIClient Class (Frontend)
+- Using Zustand to maintain the state of the application.
+
+FileUpload Class (Frontend)
+- Manages the server connection with Next.js Dropzone.
+
+#### Observer
+NotificationService (Backend & Frontend)
+- Using Sonner on the frontend side
+- Manages user notifications for when files are done processing.
+
+#### Builder
+ReportBuilder (Backend)
+- Manages the setup and organization of the different files.
+- Takes document data extracted from the different DocumentParserStrategy algorithms and adapts them using DocumentDataAdapter.
+
+#### Adapter
+DocumentDataAdapter (Backend)
+- Takes data output by DocumentParserStrategy subclasses and converts them into a centralized DocumentData that contains concrete formatted and labeled data points.
+
+#### Strategy
+DocumentParserStrategy (Backend)
+- WordDocumentParserStrategy
+	- Takes in a Word document and processes the text and document headings.
+- ExcelDocumentParserStrategy (Backend)
+	- Takes in an Excel document and processes the pages and tables.
 
 
 ### 1.7 Scaffold
