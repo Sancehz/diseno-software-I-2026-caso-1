@@ -325,7 +325,6 @@ DocumentParserStrategy (Backend)
 - ExcelDocumentParserStrategy (Backend)
 	- Takes in an Excel document and processes the pages and tables.
 
-
 ### 1.7 Scaffold
 - Visible en `/src`
 
