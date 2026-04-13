@@ -328,6 +328,45 @@ DocumentParserStrategy (Backend)
 ### 1.7 Scaffold
 - Visible en `/src`
 
+## 2. Backend Design
+### Technology Stack
+- HTTP server with REST API standardized (Open API)
+- NodeJS + Express
+- PostgreSQL + S3 for archive
+- Monorepo Solution via the Services pattern
+- No load balancing
+- AWS EKS 
+
+###	Security
+- HTTPS with row level RBAC (PostgreSQL, AES-256)
+- Max 100 concurrent DB connections to start
+- Data prod (persistent volume) to S3 archive -> 1 Month
+- Default payload size and 10MB for file upload endpoints
+
+### Observability
+- Prometheus for monitoring & Grafana for dashboard management
+- Events:
+	- Login/logout
+	- Failed logins
+	- File uploads
+	- File upload fails
+	- Report generation
+
+### DevOps
+- Actions via cronjobs / GitHub Actions
+- Deployment with Kubernetes/Helm
+
+### Availability
+- ~100 offline hours annually for maintenance (99.9% uptime)
+- Single point of failure: 
+	- Depending on load a load balancer might be needed
+	- Caching might be missing depending on demand
+	- Single DB instances -> Can be solved by tweaking ReplicaSets for demand
+
+### Scalability
+- Database and immediate persistent volume storage needs would grow as requests grow
+- Endpoint availability for file uploads
+
 ## Recursos
 - Qué es DUA: https://alianza-logistics.com/documento-unico-aduanero-2/
 - Especificacion de Hacienda: https://www.hacienda.go.cr/docs/Mensaje_TD_DUA.pdf
